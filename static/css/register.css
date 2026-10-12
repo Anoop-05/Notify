@@ -1,0 +1,145 @@
+/* Background Styling */
+body {
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Canvas for Snowfall */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Centered Form Box */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    width: 400px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Title */
+h2 {
+    color: #fff;
+}
+
+/* Input Fields */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: 0.3s ease-in-out;
+    resize: none;
+}
+
+/* Brighter Placeholders */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+}
+
+/* Button Styling */
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: white;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    transform: scale(1.05);
+}
+
+@keyframes sway {
+    0% { transform: translateX(0px); }
+    100% { transform: translateX(-20px); }
+}
+
+/* Success Message */
+.success-msg {
+    color: #0f0;
+    font-size: 16px;
+    margin-top: 10px;
+}
+/* Navbar Styling */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px; /* Increased height */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 10;
+    background: none; /* Removed background */
+}
+
+/* Logo Styling */
+.nav-logo img {
+    height: 80px; /* Increased size */
+    width: auto;
+}
+.nav-links .home-btn,
+.nav-links .schedule-btn {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: 0.3s;
+    margin-right: 50px;
+}
+
+.nav-links a.home-btn:hover,
+.nav-links a.schedule-btn:hover,
+.nav-links .home-btn.active,
+.nav-links .schedule-btn.active {
+    color: #ff5e62; /* Highlight color on hover */
+    font-weight: bold;
+}

@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow: hidden;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: moveBackground 10s ease infinite;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+    text-align: center;
+    color: white;
+    width: 100%;
+    position: relative;
+    padding-top: 60px; /* To avoid the content being hidden behind the fixed navbar */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    position: fixed;  /* Fix the navbar to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;  /* Ensure it stays above other content */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #ff5e62; /* Highlight color on hover */
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 20px;
+    margin-top: -150px; /* Adds spacing to account for the fixed navbar */
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: white;
+    color: #ff5e62;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: 0.3s;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    max-width: 200px; /* Limit width */
+    margin: 0 auto;
+}
+
+.btn:hover {
+    background: #000;
+    color: white;
+}
+
+/* 🔥 Fix: Ensure Moving Background Works */
+@keyframes moveBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.success-msg {
+    color: #0f0;
+    font-size: 16px;
+    margin-top: 10px;
+}

@@ -1,0 +1,174 @@
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    flex-direction: column;
+    padding-top: 80px; /* To avoid overlap with navbar */
+}
+
+
+.container {
+    background: rgba(30, 30, 30, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 94, 0, 0.7);
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+}
+
+h2 {
+    font-size: 28px;
+    background: linear-gradient(45deg, #ff4500, #ff9500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #222;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 10px rgba(255, 94, 0, 0.7);
+}
+
+button {
+    background: linear-gradient(45deg, #ff4500, #ff9500);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(255, 94, 0, 0.5);
+}
+
+button:hover {
+    box-shadow: 0 0 20px rgba(255, 94, 0, 1);
+    transform: scale(1.05);
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(30, 30, 30, 0.9);
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.nav-logo img {
+    height: 80px; /* Increased size */
+    width: auto;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-left: -150px;
+}
+
+.nav-links a:hover {
+    color: #ff4500;
+    text-shadow: 0 0 10px #ff4500;
+}
+/* Fire Animation Without GIF */
+.fire-effect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 69, 0, 0.7) 20%, rgba(255, 140, 0, 0.4) 40%, rgba(0, 0, 0, 0.8) 80%);
+    mix-blend-mode: screen;
+    opacity: 0.5;
+    animation: fire-flicker 1.5s infinite alternate ease-in-out;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes fire-flicker {
+    0% { opacity: 0.3; transform: scale(1) translateY(0px) rotate(0deg); filter: blur(3px); }
+    25% { opacity: 0.5; transform: scale(1.02) translateY(-3px) rotate(1deg); filter: blur(4px); }
+    50% { opacity: 0.4; transform: scale(1.03) translateY(-5px) rotate(-1deg); filter: blur(5px); }
+    75% { opacity: 0.6; transform: scale(1.05) translateY(-7px) rotate(2deg); filter: blur(6px); }
+    100% { opacity: 0.3; transform: scale(1) translateY(0px) rotate(0deg); filter: blur(3px); }
+}
+
+/* Fire Footer Styling */
+.fire-footer {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 10;
+    color: white;
+    text-align: right;
+}
+
+.fire-footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.fire-footer li {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff4500;
+}
+
+.fire-name {
+    font-size: 16px;
+    text-shadow: 0 0 5px rgba(255, 94, 0, 0.7), 0 0 10px rgba(255, 94, 0, 1);
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+.fire-name:hover {
+    text-shadow: 0 0 15px rgba(255, 94, 0, 1), 0 0 25px rgba(255, 94, 0, 1);
+    color: #ff7f50;
+}
+
+/* Flickering Fire Effect */
+@keyframes flicker {
+    0% { opacity: 0.3; }
+    50% { opacity: 0.7; }
+    100% { opacity: 0.5; }
+}
+
+.fire-name:hover {
+    animation: flicker 0.5s alternate infinite;
+}   
